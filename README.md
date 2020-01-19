@@ -20,10 +20,10 @@ the posters contact details, but papers and thumbtacks are replaced by "records"
 (or other resolvable endpoint) and a public key.
 
 ###*_Records_*
-format:
+:
 
 In addition to a resolvable address where the poster accepts connections and
-their private key, records contain a list files which the poster has, and is
+their public key, records contain a list files which the poster has, and is
 willing to share with others, which may have constraints associated with their
 access. These constraints might be a certain upload bandwith or count, a
 reputation score, speed of upload or download, or a plethera of other possible
@@ -37,7 +37,9 @@ format:
 
 *TODO*
 
-###*_Transfer Protocol_*:
+###*_Transfer Protocol_*
+:
+
 When a qualified (meets all set contraints) client has decided they would like
 to download one or more files which are shared by a host, they send an __Access
 Request__ signed with the requesting clients private key to the host. This
