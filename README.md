@@ -13,7 +13,6 @@ _Copyright 2020 Kdevb0x Ltd. Co_
 
 <sup>**NOTE**: The code currently explicitly has <b>NO LICENSE</b>, meaning the authors permission
 must be obtained before using.
-
 In compliance with Github's Terms of Service the repository is forkable, but the same rules apply to said fork. This is more likely than not to change in the near future.
 <br></sup>
 <h5><b>*You must contact the author directly to request use (and they will most
