@@ -5,9 +5,9 @@ identity bound. (Ideally anonymously, but we are not fully there yet.)
 
 *See DESCRIPTION for a more detailed description of the protocol*
 
-<h4><b><li>Unstable, constantly in-flux, and changing daily;
+<h4><b><u>Unstable, constantly in-flux, and changing daily;
 Basically not ready to be
-used.</li></b></h4>
+used.</u></b></h4>
 
 _Copyright 2020 Kdevb0x Ltd. Co_
 
@@ -15,5 +15,5 @@ _Copyright 2020 Kdevb0x Ltd. Co_
 must be obntained before using.
 In compliance with Github's Terms of Service the repository is forkable, but the same rules apply to said fork. This is more likely than not to change in the near future.
 <br></sup>
-<b><ul><li>*You must contact the author directly to request use (and they will most
-likely oblige).*</li></ul></b>
+<b><ul><u>*You must contact the author directly to request use (and they will most
+likely oblige).*</u></ul></b>
