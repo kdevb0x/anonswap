@@ -15,5 +15,5 @@ _Copyright 2020 Kdevb0x Ltd. Co_
 must be obntained before using.
 In compliance with Github's Terms of Service the repository is forkable, but the same rules apply to said fork. This is more likely than not to change in the near future.
 <br></sup>
-<b><ul><u>*You must contact the author directly to request use (and they will most
-likely oblige).*</u></ul></b>
+<b><ul>==*You must contact the author directly to request use (and they will most
+likely oblige).*==</ul></b>
