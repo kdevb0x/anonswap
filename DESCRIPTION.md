@@ -19,7 +19,7 @@ the posters contact details, but papers and thumbtacks are replaced by "records"
 (described below), and the posters telephone number is replaced by an IP address
 (or other resolvable endpoint) and a public key.
 
-###*_Records_*
+###*_Record_*
 :
 
 In addition to a resolvable address where the poster accepts connections and
@@ -59,10 +59,23 @@ this instead of just starting the transfer is so that the traffic will look
 similar whether there was an error or not, to hopfully make it more difficult
 for would-be attackers to derive any information from the system.
 
-###*_Share Initialization_*
+### *_Access Request_*
 format:
+
+*TODO*
+
+
+###*_Share Initialization_*
+:
 
 After the status report is sent (may happen in parallel), the requested files
 are packaged together into an encrypted archive, deriving a shared key from the
 requesters public key, and the hosts private key. A SHA2 hash is calculated,
 which then becomes the name of the archive.
+It is encouraged to bundle multiple files into the archive, partly to add some
+sort of entropy making individual file identitication more difficult.
+
+If multiple providers have the same files listed in the access
+request, different chunks may be downloaded from those providers in parallel and
+re-assembled on the client machine. The chunk sizes and provider limits should
+be configurable.
