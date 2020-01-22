@@ -11,11 +11,11 @@ used.__
 _Copyright 2020 Kdevb0x Ltd. Co_
 
 **NOTE**
-######The code currently explicitly has **NO LICENSE** meaning the authors permission
+#####The code currently explicitly has **NO LICENSE** meaning the authors permission
 must be obntained before using. In compliance with githbs Terms of Service the
 repository is forkable, but the same rules apply to said fork.
 This will most likely change in the near future.
 
-#####__You must contact the author directly to request use (and they will most
+####__You must contact the author directly to request use (and they will most
 likely oblige).__
 
