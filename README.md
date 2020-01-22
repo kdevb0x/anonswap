@@ -3,7 +3,7 @@
 A simple system to whic allows sharing of arbitrary files in a way which is not
 identity bound. (Ideally anonymously, but we are not fully there yet.)
 
-*SEE DESCRIPTION for a more detailed description of the protocol*
+*See DESCRIPTION for a more detailed description of the protocol*
 
 <h4><b>Unstable, constantly in-flux, and changing daily;
 Basically not ready to be
