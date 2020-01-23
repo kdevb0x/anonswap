@@ -34,7 +34,7 @@ func (h *hostRecord) PubKey() []byte {
 func (h *hostRecord) AllShares() []common.Share {
 	var s []common.Share = make([]common.Share, len(h.shares), cap(h.shares))
 	for i := 0; i < len(s); i++ {
-		var c common.Share = h.shares[i]
+		var c common.Share = &h.shares[i]
 		s[i] = c
 	}
 	return s
@@ -66,7 +66,7 @@ func (s *share) FileName() string {
 }
 
 func (s *share) FileHash() []byte {
-	return (*s).filehash
+	return s.filehash
 }
 
 func (s *share) Size() int {
