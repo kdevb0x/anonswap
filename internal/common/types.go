@@ -25,4 +25,7 @@ type Share interface {
 
 	// FileHash returns the sha512 hash of the share.
 	FileHash() []byte
+
+	// Size returns the file size.
+	Size() int
 }
