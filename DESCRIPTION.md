@@ -53,17 +53,47 @@ __Share Initialization__, and sets up the transfer using the requested
 parameters. Before sending the content the host sends __Status Report__ message
 to the client. This message is described in detail below, but it is basically
 an ack/noack message either confirming that all is well and the transfer is
-about to start, or reporting the transfer is not happening, and the reason for
-that, and possibly suggestions to remedy the error. The main reason for doing
-this instead of just starting the transfer is so that the traffic will look
-similar whether there was an error or not, to hopfully make it more difficult
-for would-be attackers to derive any information from the system.
+being initialized, or reporting that the transfer is not happening, the reason for
+that, and possibly suggestions to remedy the error.
+
+<!-- One reason for doing this instead of just starting the transfer is so
+that the traffic will look similar whether there was an error or not, to
+hopfully make it more difficult for would-be attackers to derive any information
+from the system. -->
 
 ### *_Access Request_*
 format:
 
 *TODO*
 
+### *_Fullfilment Commitment Response_*
+
+The __Fullfillment Commitment__ response is sent in response to an __Access
+Request__. It indicates that a provider possesses the requested file, and is
+commiting to provide some, or all of the file, and all of the constraint options
+available for the request. These include things like the available chunk sizes,
+file-to-padding ratio, and other possible options available for the transfer.
+If the host is only commiting to a provide parts of a requested file (but no the
+whole) which bits are available, and their offsets must be stated explicitly.
+
+### *_Fullfillment Response_*
+format:
+
+Response Time UTC
+
+Participation Commitment Expiration (commiting to provide the indicated chunks only until
+this time, after which they may, or may not be provided by this provider.)
+
+Requested File Hash (complete file; without padding)
+
+Total Number of Chunks to complete transfer
+
+Chunk Size (including padding)
+
+Total Number of Providing Chunks, and their offsets in the raw, unpadded original.
+
+*TODO*
+(probably more...)
 
 ###*_Share Initialization_*
 :
@@ -79,3 +109,14 @@ If multiple providers have the same files listed in the access
 request, different chunks may be downloaded from those providers in parallel and
 re-assembled on the client machine. The chunk sizes and provider limits should
 be configurable.
+
+###*_Host Upload Preperation_*:
+
+Once a participating host that posesses a requested file has sent the
+__Fullfillment Response__ (indicating their willing to participate, chunk size,
+and count of providing chunks) and it is accepted, the host creates a secure enclave
+large enough to hold everything needed to fullfill the request, then allocates and
+zeros out the memory. Then the __Requested File__ is split into __Chunk Count__
+__Chunk Size__ed pieces, (including padding, and metadata). Then, a password
+protected archive is created from each chunk, along with padding bits (see
+**Data Transfer** section for more info).
