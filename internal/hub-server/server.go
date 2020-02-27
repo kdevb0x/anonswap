@@ -72,3 +72,7 @@ func (s *share) FileHash() []byte {
 func (s *share) Size() int {
 	return s.length
 }
+
+type Share struct {
+	share
+}
