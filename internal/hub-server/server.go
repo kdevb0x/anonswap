@@ -49,28 +49,40 @@ func (h *hostRecord) Valid() bool {
 
 type share struct {
 	// the files name
-	Filename string
+	filename string
 
 	// the files sha512 hash
-	Filehash []byte
+	filehash []byte
 
 	// total size in bytes of the file
-	Length int
+	length int
 
 	// offset into the swapPkg where this file begins.
-	Offset int
+	offset int
 }
 
 func (s *share) FileName() string {
-	return s.Filename
+	return s.filename
 }
 
 func (s *share) FileHash() []byte {
-	return s.Filehash
+	return s.filehash
 }
 
 func (s *share) Size() int {
-	return s.Length
+	return s.length
+}
+func (ss *Share) SetFileName(name string) {
+	ss.filename = name
+}
+func (ss *Share) SetFileHash(hash []byte) {
+	ss.filehash = hash
+}
+func (ss *Share) SetLength(l int) {
+	ss.length = l
+}
+func (ss *Share) SetOffset(o int) {
+	ss.offset = o
 }
 
 type Share struct {
